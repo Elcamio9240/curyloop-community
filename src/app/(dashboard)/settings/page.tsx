@@ -5,7 +5,6 @@ import { db } from "@/lib/db";
 import { apiKeys } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { ApiKeyManager } from "@/components/settings/api-key-manager";
-import { CloudCta } from "@/components/cloud-cta";
 
 export default async function SettingsPage() {
   const session = await auth.api.getSession({ headers: await headers() });

@@ -16,7 +16,7 @@ Thank you for your interest in contributing! Whether it's a bug fix, a new featu
 2. **Clone** your fork:
    ```bash
    git clone https://github.com/YOUR_USERNAME/community.git
-   cd community
+   cd curyloop-community
    ```
 3. **Install dependencies:**
    ```bash
@@ -41,13 +41,13 @@ Thank you for your interest in contributing! Whether it's a bug fix, a new featu
 
 ### Reporting Bugs
 
-- Use the [Bug Report](https://github.com/curyloop/community/issues/new?template=bug_report.yml) issue template
+- Use the [Bug Report](https://github.com/montarist/curyloop-community/issues/new?template=bug_report.yml) issue template
 - Include your deployment method, version, and steps to reproduce
 - Attach relevant logs or screenshots
 
 ### Suggesting Features
 
-- Use the [Feature Request](https://github.com/curyloop/community/issues/new?template=feature_request.yml) issue template
+- Use the [Feature Request](https://github.com/montarist/curyloop-community/issues/new?template=feature_request.yml) issue template
 - Describe the problem you're trying to solve
 - Check existing issues first to avoid duplicates
 
@@ -144,8 +144,8 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ## Community
 
-- **Issues**: [GitHub Issues](https://github.com/curyloop/community/issues) for bugs and features
-- **Discussions**: [GitHub Discussions](https://github.com/curyloop/community/discussions) for questions and ideas
+- **Issues**: [GitHub Issues](https://github.com/montarist/curyloop-community/issues) for bugs and features
+- **Discussions**: [GitHub Discussions](https://github.com/montarist/curyloop-community/discussions) for questions and ideas
 
 ## Code of Conduct
 

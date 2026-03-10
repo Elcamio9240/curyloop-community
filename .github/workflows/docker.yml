@@ -1,9 +1,7 @@
 name: Docker
 
 on:
-  push:
-    branches: [main]
-    tags: ["v*"]
+  workflow_dispatch:
 
 env:
   REGISTRY_GHCR: ghcr.io
@@ -46,7 +44,7 @@ jobs:
         with:
           images: |
             ${{ env.REGISTRY_GHCR }}/${{ env.IMAGE_NAME }}
-            curyloop/community
+            montarist/curyloop-community
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}

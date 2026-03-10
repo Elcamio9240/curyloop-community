@@ -8,10 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/curyloop/community/actions/workflows/ci.yml"><img src="https://github.com/curyloop/community/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
-  <a href="https://github.com/curyloop/community/actions/workflows/docker.yml"><img src="https://github.com/curyloop/community/actions/workflows/docker.yml/badge.svg" alt="Docker" /></a>
-  <a href="https://github.com/curyloop/community/blob/main/LICENSE"><img src="https://img.shields.io/github/license/curyloop/community" alt="License" /></a>
-  <a href="https://github.com/curyloop/community/releases"><img src="https://img.shields.io/github/v/release/curyloop/community" alt="Release" /></a>
+  <a href="https://github.com/montarist/curyloop-community/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+  <a href="https://github.com/montarist/curyloop-community/releases"><img src="https://img.shields.io/github/v/release/montarist/curyloop-community" alt="Release" /></a>
 </p>
 
 ---
@@ -24,7 +22,7 @@ docker run -d \
   -p 3000:3000 \
   -e ENCRYPTION_KEY=$(openssl rand -hex 32) \
   -e BETTER_AUTH_SECRET=$(openssl rand -base64 32) \
-  curyloop/community
+  montarist/curyloop-community
 ```
 
 Open **http://localhost:3000** and create your first account.
@@ -32,7 +30,7 @@ Open **http://localhost:3000** and create your first account.
 Or with Docker Compose:
 
 ```bash
-curl -O https://raw.githubusercontent.com/curyloop/community/main/docker-compose.yml
+curl -O https://raw.githubusercontent.com/montarist/curyloop-community/main/docker-compose.yml
 docker compose up -d
 ```
 
@@ -52,52 +50,52 @@ docker compose up -d
 
 ### Community vs Cloud
 
-| Feature | Community | Cloud |
-|---------|:---------:|:-----:|
-| Groups, Sessions, Items (unlimited) | ✅ | ✅ |
-| Tags, Collections, FTS5 Search | ✅ | ✅ |
-| AI Agent & Summaries (BYOK) | ✅ | ✅ |
-| Import / Export | ✅ | ✅ |
-| Integrations & Webhooks | ✅ | ✅ |
-| MCP & Browser Extension | ✅ | ✅ |
-| OAuth (Google, GitHub) | — | ✅ |
-| Push Notifications | — | ✅ |
-| Email Digests | — | ✅ |
-| Analytics Dashboard | — | ✅ |
-| Smart Collections | — | ✅ |
-| Managed Infrastructure | — | ✅ |
+| Feature                             | Community | Cloud |
+| ----------------------------------- | :-------: | :---: |
+| Groups, Sessions, Items (unlimited) |    ✅     |  ✅   |
+| Tags, Collections, FTS5 Search      |    ✅     |  ✅   |
+| AI Agent & Summaries (BYOK)         |    ✅     |  ✅   |
+| Import / Export                     |    ✅     |  ✅   |
+| Integrations & Webhooks             |    ✅     |  ✅   |
+| MCP & Browser Extension             |    ✅     |  ✅   |
+| OAuth (Google, GitHub)              |     —     |  ✅   |
+| Push Notifications                  |     —     |  ✅   |
+| Email Digests                       |     —     |  ✅   |
+| Analytics Dashboard                 |     —     |  ✅   |
+| Smart Collections                   |     —     |  ✅   |
+| Managed Infrastructure              |     —     |  ✅   |
 
 **[Try Curyloop Cloud →](https://curyloop.com)**
 
 ## Tech Stack
 
-| Layer | Choice |
-|-------|--------|
+| Layer     | Choice                                     |
+| --------- | ------------------------------------------ |
 | Framework | Next.js 16 (App Router, standalone output) |
-| Database | SQLite (WAL mode, single file) |
-| ORM | Drizzle ORM |
-| Auth | better-auth (email/password) |
-| UI | Tailwind CSS 4 + Radix UI |
-| AI | Vercel AI SDK (BYOK) |
-| Cron | node-cron (in-process) |
-| Search | SQLite FTS5 |
+| Database  | SQLite (WAL mode, single file)             |
+| ORM       | Drizzle ORM                                |
+| Auth      | better-auth (email/password)               |
+| UI        | Tailwind CSS 4 + Radix UI                  |
+| AI        | Vercel AI SDK (BYOK)                       |
+| Cron      | node-cron (in-process)                     |
+| Search    | SQLite FTS5                                |
 
 ## Environment Variables
 
-| Variable | Required | Description |
-|----------|:--------:|-------------|
-| `ENCRYPTION_KEY` | **Yes** | 64-char hex string for AES-256-GCM encryption of LLM keys |
-| `BETTER_AUTH_SECRET` | **Yes** | Random string (32+ chars) for session signing |
-| `DATABASE_PATH` | No | SQLite file path (default: `/data/curyloop.db`) |
-| `NEXT_PUBLIC_SITE_URL` | No | Public URL (default: `http://localhost:3000`) |
-| `DISABLE_CLOUD_CTA` | No | Set `true` to hide Cloud upgrade prompts |
+| Variable               | Required | Description                                               |
+| ---------------------- | :------: | --------------------------------------------------------- |
+| `ENCRYPTION_KEY`       | **Yes**  | 64-char hex string for AES-256-GCM encryption of LLM keys |
+| `BETTER_AUTH_SECRET`   | **Yes**  | Random string (32+ chars) for session signing             |
+| `DATABASE_PATH`        |    No    | SQLite file path (default: `/data/curyloop.db`)           |
+| `NEXT_PUBLIC_SITE_URL` |    No    | Public URL (default: `http://localhost:3000`)             |
+| `DISABLE_CLOUD_CTA`    |    No    | Set `true` to hide Cloud upgrade prompts                  |
 
 ## Development
 
 ```bash
 # Clone the repo
-git clone https://github.com/curyloop/community.git
-cd community
+git clone https://github.com/montarist/curyloop-community.git
+cd curyloop-community
 
 # Install dependencies
 pnpm install
@@ -115,16 +113,16 @@ Open **http://localhost:3000**.
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start dev server with Turbopack |
-| `pnpm build` | Production build |
-| `pnpm start` | Start production server |
-| `pnpm lint` | Run ESLint |
-| `pnpm type-check` | Run TypeScript compiler check |
-| `pnpm db:generate` | Generate Drizzle migrations |
-| `pnpm db:migrate` | Run pending migrations |
-| `pnpm db:studio` | Open Drizzle Studio (DB browser) |
+| Command            | Description                      |
+| ------------------ | -------------------------------- |
+| `pnpm dev`         | Start dev server with Turbopack  |
+| `pnpm build`       | Production build                 |
+| `pnpm start`       | Start production server          |
+| `pnpm lint`        | Run ESLint                       |
+| `pnpm type-check`  | Run TypeScript compiler check    |
+| `pnpm db:generate` | Generate Drizzle migrations      |
+| `pnpm db:migrate`  | Run pending migrations           |
+| `pnpm db:studio`   | Open Drizzle Studio (DB browser) |
 
 ## Docker Build
 
@@ -167,23 +165,23 @@ server {
 
 All endpoints under `/api/v1/` require authentication via session cookie or API key.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET/POST | `/api/v1/groups` | List / create groups |
-| POST | `/api/v1/sessions` | Create session |
-| GET/POST | `/api/v1/items` | List / create items |
-| GET | `/api/v1/search?q=...` | Full-text search |
-| POST | `/api/v1/import` | Import bookmarks |
-| GET | `/api/export?format=json` | Export data |
-| POST/GET | `/api/v1/api-keys` | Manage API keys |
+| Method   | Endpoint                  | Description          |
+| -------- | ------------------------- | -------------------- |
+| GET/POST | `/api/v1/groups`          | List / create groups |
+| POST     | `/api/v1/sessions`        | Create session       |
+| GET/POST | `/api/v1/items`           | List / create items  |
+| GET      | `/api/v1/search?q=...`    | Full-text search     |
+| POST     | `/api/v1/import`          | Import bookmarks     |
+| GET      | `/api/export?format=json` | Export data          |
+| POST/GET | `/api/v1/api-keys`        | Manage API keys      |
 
 ### Browser Extension API
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/extension/auth` | Verify API key |
-| GET | `/api/extension/sessions` | List recent sessions |
-| POST | `/api/extension/items` | Save item from extension |
+| Method | Endpoint                  | Description              |
+| ------ | ------------------------- | ------------------------ |
+| GET    | `/api/extension/auth`     | Verify API key           |
+| GET    | `/api/extension/sessions` | List recent sessions     |
+| POST   | `/api/extension/items`    | Save item from extension |
 
 ### MCP Endpoint
 
@@ -198,9 +196,9 @@ curl -X POST http://localhost:3000/api/mcp \
 
 We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
-- **Bug reports**: [Open an issue](https://github.com/curyloop/community/issues/new?template=bug_report.yml)
-- **Feature requests**: [Open an issue](https://github.com/curyloop/community/issues/new?template=feature_request.yml)
-- **Questions & ideas**: [GitHub Discussions](https://github.com/curyloop/community/discussions)
+- **Bug reports**: [Open an issue](https://github.com/montarist/curyloop-community/issues/new?template=bug_report.yml)
+- **Feature requests**: [Open an issue](https://github.com/montarist/curyloop-community/issues/new?template=feature_request.yml)
+- **Questions & ideas**: [GitHub Discussions](https://github.com/montarist/curyloop-community/discussions)
 
 ## Security
 
@@ -213,11 +211,9 @@ Found a vulnerability? Please see [SECURITY.md](./SECURITY.md) for responsible d
 ---
 
 <p align="center">
-  <sub>Built with Next.js, SQLite, and Drizzle ORM</sub>
-  <br />
   <sub>
     <a href="https://curyloop.com">Curyloop Cloud</a> ·
-    <a href="https://github.com/curyloop/community/issues">Issues</a> ·
-    <a href="https://github.com/curyloop/community/discussions">Discussions</a>
+    <a href="https://github.com/montarist/curyloop-community/issues">Issues</a> ·
+    <a href="https://github.com/montarist/curyloop-community/discussions">Discussions</a>
   </sub>
 </p>

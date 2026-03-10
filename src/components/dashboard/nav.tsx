@@ -6,7 +6,6 @@ import { signOut } from "@/lib/auth/client";
 import {
   LayoutDashboard,
   Users,
-  Bookmark,
   FolderOpen,
   Search,
   Bot,

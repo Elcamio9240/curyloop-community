@@ -1,8 +1,8 @@
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { db } from "@/lib/db";
-import { items, sessions, groups, groupMembers, tags, itemTags } from "@/lib/db/schema";
-import { eq, inArray, and } from "drizzle-orm";
+import { items, sessions, groupMembers, tags, itemTags } from "@/lib/db/schema";
+import { eq, inArray } from "drizzle-orm";
 
 export async function GET(request: Request) {
   const session = await auth.api.getSession({ headers: await headers() });

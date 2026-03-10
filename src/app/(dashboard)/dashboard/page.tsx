@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { groups, groupMembers, sessions, items } from "@/lib/db/schema";
+import { groupMembers, sessions, items } from "@/lib/db/schema";
 import { eq, inArray, count } from "drizzle-orm";
 import Link from "next/link";
 import { Plus, Users, Bookmark, FolderOpen } from "lucide-react";

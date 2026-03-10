@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
 
-export function AddItemForm({ sessionId, groupId }: { sessionId: string; groupId: string }) {
+export function AddItemForm({ sessionId }: { sessionId: string; groupId: string }) {
   const router = useRouter();
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
