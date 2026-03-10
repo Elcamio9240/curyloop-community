@@ -1,0 +1,17 @@
+services:
+  curyloop:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - curyloop-data:/data
+    environment:
+      - DATABASE_PATH=/data/curyloop.db
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
+      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+      - DISABLE_CLOUD_CTA=${DISABLE_CLOUD_CTA:-false}
+    restart: unless-stopped
+
+volumes:
+  curyloop-data:
